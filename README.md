@@ -36,7 +36,7 @@ This project uses **Choreography-based Saga**, where each microservice listens t
 
 ## 🏗️ Project Structure
 ```bash
-smarttrip-booking-system/
+intel-travel-api/
 ├── api-gateway/
 ├── discovery-service/
 ├── iam-service/
