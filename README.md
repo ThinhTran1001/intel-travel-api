@@ -1,4 +1,4 @@
-# SmartTrip Booking System - Spring Microservices with Saga Pattern
+# Intel Travel System - Spring Microservices with Saga Pattern
 
 ## 📌 Overview
 This project is a **flight, hotel, and restaurant booking system** built using **Spring Boot Microservices** and **Saga Pattern** to handle distributed transactions.
