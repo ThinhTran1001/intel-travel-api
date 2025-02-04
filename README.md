@@ -6,21 +6,20 @@ This project is a **flight, hotel, and restaurant booking system** built using *
 ## 🏗️ Architecture
 The system consists of the following microservices:
 
-- **User Service**: Manages user authentication & profiles.
+- **IAM Service**: Manages user authentication & profiles.
 - **Flight Service**: Handles flight ticket reservations.
 - **Hotel Service**: Manages hotel bookings.
 - **Restaurant Service**: Handles restaurant table reservations.
 - **Payment Service**: Processes payments.
 - **Notification Service**: Sends confirmation emails.
-- **Gateway Service**: Acts as API Gateway.
-- **Discovery Service (Eureka)**: Enables service discovery.
-- **Saga Choreography**: Manages distributed transactions using event-based communication.
+- **API Gateway**: Acts as API Gateway.
+- **Discovery Server (Eureka)**: Enables service discovery.
 
 ## ⚙️ Technologies Used
 - **Spring Boot & Spring Cloud** (Eureka, OpenFeign, Gateway, Config Server)
 - **Spring Security & JWT** for authentication
-- **Kafka / RabbitMQ** for event-driven communication
-- **MySQL / PostgreSQL** for relational data storage
+- **Kafka** for event-driven communication
+- **PostgreSQL** for relational data storage
 - **Docker & Kubernetes** for containerization and orchestration
 
 ## 🔄 Saga Pattern Implementation
