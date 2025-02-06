@@ -7,6 +7,7 @@ This project is a **flight, hotel, and restaurant booking system** built using *
 The system consists of the following microservices:
 
 - **IAM Service**: Manages user authentication & profiles.
+- **Common**: Contain common configuration, validator and utility.
 - **Flight Service**: Handles flight ticket reservations.
 - **Hotel Service**: Manages hotel bookings.
 - **Restaurant Service**: Handles restaurant table reservations.
@@ -38,6 +39,7 @@ This project uses **Choreography-based Saga**, where each microservice listens t
 ```bash
 intel-travel-api/
 ├── api-gateway/
+├── common/
 ├── discovery-service/
 ├── iam-service/
 ├── flight-service/
