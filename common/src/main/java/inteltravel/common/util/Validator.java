@@ -10,6 +10,9 @@ import org.apache.commons.lang3.StringUtils;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -410,6 +413,17 @@ public class Validator {
      */
     public static boolean isDate(int month, int day, int year) {
         return isGregorianDate(month, day, year);
+    }
+
+    public static boolean isDateBeforeNow(String inputDateStr) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // Định dạng ngày nhập vào
+        try {
+            LocalDate inputDate = LocalDate.parse(inputDateStr, formatter);
+            LocalDate today = LocalDate.now();
+            return !inputDate.isAfter(today);
+        } catch (DateTimeParseException e) {
+            return false;
+        }
     }
 
     public static boolean isDate(String input) {
@@ -1043,6 +1057,10 @@ public class Validator {
         return !Pattern.compile(RegularExpressionConstants.DEFAULT_REGEXP_FULL_NAME)
                 .matcher(fullName)
                 .matches();
+    }
+
+    public static boolean isNullOrBlank(String str) {
+        return str == null || str.trim().isEmpty();
     }
 
     public static boolean isEmail(String email) {

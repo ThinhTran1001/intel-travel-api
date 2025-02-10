@@ -1,0 +1,34 @@
+package inteltravel.iamservice.enums;
+
+import inteltravel.iamservice.constant.LabelKey;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
+public enum MessageCode {
+
+    MSG1001(LabelKey.SUCCESS_LOGIN_SUCCESS),
+    MSG1002(LabelKey.SUCCESS_LOGOUT_SUCCESS),
+    MSG1003(LabelKey.SUCCESS_SIGN_UP_SUCCESS),
+    MSG1004(LabelKey.ERROR_FIRST_NAME_IS_EMPTY),
+    MSG1005(LabelKey.ERROR_LAST_NAME_IS_EMPTY),
+    MSG1006(LabelKey.ERROR_EMAIL_IS_EMPTY),
+    MSG1007(LabelKey.ERROR_FIRST_NAME_IS_INVALID),
+    MSG1008(LabelKey.ERROR_LAST_NAME_IS_INVALID),
+    MSG1009(LabelKey.ERROR_INVALID_ADDRESS),
+    MSG1010(LabelKey.ERROR_PHONE_NUMBER_IS_EMPTY),
+    MSG1011(LabelKey.ERROR_PHONE_NUMBER_IS_INVALID),
+    MSG1012(LabelKey.ERROR_ADDRESS_IS_EMPTY),
+    MSG1013(LabelKey.ERROR_PASSWORD_IS_EMPTY),
+    MSG1014(LabelKey.ERROR_PASSWORD_IS_INVALID),
+    MSG1015(LabelKey.ERROR_DATE_OF_BIRTH_IS_EMPTY),
+    MSG1016(LabelKey.ERROR_DATE_OF_BIRTH_IS_INVALID),
+    MSG1017(LabelKey.ERROR_OTP_HAS_EXPIRED),
+    MSG1018(LabelKey.ERROR_EMAIL_IS_INVALID),
+    MSG1019(LabelKey.ERROR_DATE_IS_AFTER_CURRENT_DATE);
+
+
+    private String key;
+
+}

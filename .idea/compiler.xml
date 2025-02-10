@@ -17,13 +17,21 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="iam-service" />
         <module name="restaurant-service" />
         <module name="payment-service" />
         <module name="common" />
         <module name="notification-service" />
         <module name="flight-service" />
         <module name="hotel-service" />
+      </profile>
+      <profile name="Annotation profile for iam-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="iam-service" />
       </profile>
     </annotationProcessing>
   </component>
